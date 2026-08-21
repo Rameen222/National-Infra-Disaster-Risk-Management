@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.vite/
+
+# Credentials — never commit service account keys
+geekey.json
+*.serviceaccount.json
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.local
+# Keep the template committed for fresh-clone bootstrap
+!.env.example
+!**/.env.example
+
+# Editor directories
+.vscode/
+.idea/
+
+# Test coverage
+coverage/
+
+# Large geospatial data files
+*.geojson
+
+# Public folder — distributed separately, never committed
+client/public/
+client/public.rar
+client/public.zip
+
+# Claude session data
+.claude/
+
+# Python
+__pycache__/
+pybackend/temp/
+
+# Pipeline scratch space
+scripts/v5_impact/_work/
+
+# Logs
+server.log
+pybackend.log

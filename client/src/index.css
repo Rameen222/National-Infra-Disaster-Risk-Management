@@ -1,0 +1,94 @@
+/* ══════════════════════════════════════════════════════════
+   NIDRMP – Global Design Tokens & Base Styles
+   Professional Dark Theme with Diverging Accent Palette
+   ══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Surface / Background ──────────────────────────── */
+  --bg-deep:       #040811;
+  --bg-base:       #070d1a;
+  --bg-surface:    #0d1525;
+  --bg-elevated:   #131d36;
+  --bg-hover:      #1a2740;
+  --bg-card:       rgba(255, 255, 255, 0.025);
+
+  /* ── Borders ───────────────────────────────────────── */
+  --border-subtle: rgba(148, 163, 184, 0.08);
+  --border-default:rgba(148, 163, 184, 0.12);
+  --border-accent: rgba(56, 189, 248, 0.2);
+
+  /* ── Primary Palette (Cyan / Sky) ──────────────────── */
+  --primary:       #4fc3f7;
+  --primary-light: #90e0ff;
+  --primary-muted: rgba(79, 195, 247, 0.18);
+  --primary-glow:  rgba(79, 195, 247, 0.10);
+
+  /* ── Accent – Emerald ──────────────────────────────── */
+  --accent:        #3eeba8;
+  --accent-light:  #80ffc8;
+  --accent-muted:  rgba(62, 235, 168, 0.18);
+
+  /* ── Warning – Amber ───────────────────────────────── */
+  --warn:          #ffc933;
+  --warn-light:    #ffdb5c;
+  --warn-muted:    rgba(255, 201, 51, 0.14);
+
+  /* ── Danger – Rose ─────────────────────────────────── */
+  --danger:        #ff7b95;
+  --danger-light:  #ffaab8;
+  --danger-muted:  rgba(255, 123, 149, 0.14);
+
+  /* ── Violet ────────────────────────────────────────── */
+  --violet:        #b49cff;
+  --violet-muted:  rgba(180, 156, 255, 0.14);
+
+  /* ── Text ──────────────────────────────────────────── */
+  --text-primary:  #f0f4ff;
+  --text-secondary:#b0c4de;
+  --text-muted:    #7a8faa;
+  --text-dim:      #546380;
+
+  /* ── Misc ──────────────────────────────────────────── */
+  --radius-sm:     6px;
+  --radius-md:     10px;
+  --radius-lg:     14px;
+  --shadow-md:     0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg:     0 8px 40px rgba(0, 0, 0, 0.55);
+  --transition:    0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Font ──────────────────────────────────────────── */
+  --font-sans:     'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  height: 100vh;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Scrollbar global reset ──────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bg-elevated); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--bg-hover); }
+
+::selection {
+  background: var(--primary-muted);
+  color: var(--primary-light);
+}
